@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+    <h3 >Calculo De Combustivel</h3>
+    <b>Tempo de descarregamento:</b><input id="horas">
+    <button onclick="calculo ()">
+        calcular
+    </button>
+    </div>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>    
+    
+    function calculo (){        
+        var valorCombustivel = Number(horas.value) * 3600;
+        resultado.innerHTML += `Atracado no porto você gasta em média R$ ${valorCombustivel} em combustivel até descarregar.`;
+        economia();
+    }
+    function economia(){
+        var valorEconomia = (Number(horas.value) - 4) * 3600;
+        resultado.innerHTML += `<br> Com nosso software você economizara 4 horas no descarregamento, Com isso você ira gastar apneas R$${valorEconomia} em todo o descarregamento.`;
+    }
+</script>
