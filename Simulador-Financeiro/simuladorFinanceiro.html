@@ -8,13 +8,7 @@
   <body>
     <div style="text-align: center">
       <h2
-        style="
-          font-family: verdana;
-          color: #15a3b9;
-          text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px,
-            black -1px -1px 1px;
-        "
-      >
+        style="font-family: verdana;color: #15a3b9;text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px, black -1px -1px 1px;">
         <u>Cálculo De Combustível</u>
       </h2>
       <br />
@@ -29,7 +23,7 @@
 <script>
   function calculo() {
     var valorCombustivel = Number(horas.value) * 3600;
-    resultado.innerHTML += `<span style = 'font-family: arial'>Atracado no porto você gasta em média <b style = 'color: red'><u>R$${valorCombustivel}</u></b>
+    resultado.innerHTML = `<span style = 'font-family: arial'>Atracado no porto você gasta em média <b style = 'color: red'><u>R$${valorCombustivel}</u></b>
      em combustivel até descarregar.</span>`;
     economia();
   }
@@ -38,5 +32,6 @@
     resultado.innerHTML += `<br><span style = 'font-family: arial'>Usando nosso software você economizará
      <b style = 'color: #15a3b9'><u>4 horas</u></b> no descarregamento. Com isso você irá gastar apenas <b style = 'color: #15a3b9'><u>R$${valorEconomia}</u></b> 
      em todo o descarregamento.</span>`;
+     horas.value = '';
   }
 </script>
