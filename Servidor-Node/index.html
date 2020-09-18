@@ -20,7 +20,8 @@
 		<h2>Média: <label id='average'>0.00</label></h2>
 		<h2>Média Hora: <label id='averageHour'>0.00</label></h2>
 	</section>
-	<section style="width:100%">
+	
+<section style="width:100%"> <!-- mudança de tamanho  -->
 		<canvas id="chart"></canvas>
 	<section>
 	<script>
@@ -36,8 +37,8 @@
 				datasets: [{
 					label: "Temperature x Time",
 					type: 'line',
-					backgroundColor: ['#c0392b'],//muda cor de fundo
-					borderColor: ['#c0392b'], //muda cor da linha
+					backgroundColor: ['#9AECDB'],//muda cor de fundo
+					borderColor: ['#9AECDB'], //muda cor da linha
 				}]
 			},
 			options: {
@@ -57,8 +58,8 @@
                         },
                         ticks: {
 							beginAtZero:true,
-							suggestedMin: 0,
-							suggestedMax: 30
+							suggestedMin: -10,
+							suggestedMax: -30,
                         }
 					}]
 				},

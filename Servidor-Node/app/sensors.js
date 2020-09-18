@@ -1,6 +1,6 @@
 function lm35(min, max) {  //função que defini recebe 2 parametros, o min e max
-    min = typeof min == 'undefined' ? 18 : min; // defini a temperatura minima
-    max = typeof max == 'undefined' ? 25 : max; // defini a temperatura máxima
+    min = typeof min == 'undefined' ? -10 : min; // defini a temperatura minima
+    max = typeof max == 'undefined' ? -18 : max; // defini a temperatura máxima
     
     let random = Math.random() * (max - min) + min; // sorteio aleatório entre a temperatura mínima e máxima
 
