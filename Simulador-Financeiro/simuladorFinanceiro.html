@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simulador Financeiro</title>
-  </head>
-  <body>
-    <div style="text-align: center">
-      <h2
-        style="font-family: verdana;color: #15a3b9;text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px, black -1px -1px 1px;">
-        <u>Cálculo De Combustível</u>
-      </h2>
-      <br />
-      <b style="font-family: arial">Tempo de descarregamento: </b
-      ><input id="horas" />&nbsp;&nbsp;
-      <button onclick="calculo()">Calcular</button>
-    </div>
-    <br /><br />
-    <div style="text-align: center" id="resultado"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador Financeiro</title>
+</head>
+
+<body>
+  <div style="text-align: center">
+    <h2 style="font-family: verdana;color: #15a3b9;text-shadow: black 1px 1px 1px, black -1px 1px 1px, black 1px -1px 1px, black -1px -1px 1px;">
+      <u>Cálculo De Combustível</u>
+    </h2>
+    <br>
+    <b style="font-family: arial">Tempo de descarregamento em horas:</b> <input type="number" placeholder="somente números" id="horas">
+    <button onclick="calculo()">Calcular</button>
+  </div>
+  <br><br>
+  <div style="text-align: center" id="resultado"></div>
+</body>
+
 </html>
 <script>
   function calculo() {
@@ -26,12 +27,12 @@
     resultado.innerHTML = `<span style = 'font-family: arial'>Atracado no porto você gasta em média <b style = 'color: red'><u>R$${valorCombustivel}</u></b>
      em combustivel até descarregar.</span>`;
     economia();
-  }
+  };
   function economia() {
     var valorEconomia = (Number(horas.value) - 4) * 3600;
-    resultado.innerHTML += `<br><span style = 'font-family: arial'>Usando nosso software você economizará
+    resultado.innerHTML += `<br><span style='font-family: arial'>Usando nosso software você economizará
      <b style = 'color: #15a3b9'><u>4 horas</u></b> no descarregamento. Com isso você irá gastar apenas <b style = 'color: #15a3b9'><u>R$${valorEconomia}</u></b> 
      em todo o descarregamento.</span>`;
-     horas.value = '';
-  }
+    horas.value = '';
+  };
 </script>
