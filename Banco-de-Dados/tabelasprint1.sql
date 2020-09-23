@@ -34,4 +34,3 @@ insert into usuario (nome,telefone,email,dataNasc) values
 select * from usuario;
 
 select * from sensores;
- 
