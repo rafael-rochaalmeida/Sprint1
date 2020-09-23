@@ -22,7 +22,7 @@
 
 </html>
 <script>
-  var valorCombustivel
+  var valorCombustivel;
   function calculo() {
     valorCombustivel = Number(horas.value) * 3600;
     resultado.innerHTML = `<span style = 'font-family: arial'>Atracado no porto você gasta em média <b style = 'color: red'><u>R$${valorCombustivel}</u></b>
@@ -34,7 +34,7 @@
     var economia = valorCombustivel - valorEconomia;
     resultado.innerHTML += `<br><span style='font-family: arial'>Usando nosso software você economizará
      <b style = 'color: #15a3b9'><u>4 horas</u></b> no descarregamento. Com isso você irá gastar apenas <b style = 'color: #15a3b9'><u>R$${valorEconomia}</u></b> 
-     em todo o descarregamento. <br> uma economida total de R$ <b style = 'color: #15a3b9'><u>R$${economia}</u></b> por descarregamento.</span>`;
+     em todo o descarregamento. <br> uma economida total de <b style = 'color: #15a3b9'><u>R$${economia}</u></b> por descarregamento.</span>`;
     horas.value = '';
   };
 </script>
